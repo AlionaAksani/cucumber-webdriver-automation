@@ -11,7 +11,7 @@ class LoginPage extends Page {
     }
 
     get btnLogin () {
-        return $('button[data-test="login-button"]');
+        return $('input[data-test="login-button"]');
     }
 
     async login (username, password) {
@@ -20,12 +20,12 @@ class LoginPage extends Page {
         await this.btnLogin.click();
     }
 
-    open () {
-        return super.open('');
+    get errorMessage () {
+        return $('[data-test="error"]');
     }
 
-    async checkErrorMessage(errorMessage) {
-        await expect('')
+    open () {
+        return super.open('');
     }
 }
 

@@ -2,7 +2,7 @@
   "name": "cucumber-webdriver-automation",
   "version": "1.0.0",
   "scripts": {
-    "test-local": "npx wdio run ./wdio.conf.js"
+    "test-local": "npx wdio run wdio.local.conf.js"
   },
   "author": "",
   "license": "ISC",

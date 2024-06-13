@@ -1,6 +1,6 @@
 Feature: Login
 
-  Scenario: Username is required for login
+  Scenario: Error on empty login
     Given User is located on the main page of saucedemo website
-    When User click "Login" button
+    When User clicks the "Login" button
     Then User should see "Epic sadface: Username is required" error message

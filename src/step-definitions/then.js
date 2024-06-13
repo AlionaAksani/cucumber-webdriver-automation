@@ -1,6 +1,7 @@
 const { Then } = require('@wdio/cucumber-framework');
-const loginPage = require('../pageobjects/login.page')
+const loginPage = require('../pageobjects/login.page');
 
-Then(/^User should see "(.*)" error message$/, async (error) => {
-    await loginPage.checkErrorMessage(error)
+Then(/^User should see "(.*)" error message$/, async (expectedError) => {
+    await expect(loginPage.errorMessage).toBeDisplayed();
+    await expect(loginPage.errorMessage).toHaveText(expectedError);
 })
