@@ -24,6 +24,12 @@ class LoginPage extends Page {
         return $('[data-test="error"]');
     }
 
+    get buttons(){
+        return new {
+            'login': this.btnLogin
+        }
+    }
+
     open () {
         return super.open('');
     }
